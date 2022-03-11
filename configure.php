@@ -5,18 +5,18 @@ function ask(string $question, string $default = ''): string
 {
     $answer = readline($question.($default ? " ({$default})" : null).': ');
 
-    if (!$answer) {
+    if (! $answer) {
         return $default;
     }
 
     return $answer;
 }
 
-function confirm(string $question, bool $default = FALSE): bool
+function confirm(string $question, bool $default = false): bool
 {
     $answer = ask($question.' ('.($default ? 'Y/n' : 'y/N').')');
 
-    if (!$answer) {
+    if (! $answer) {
         return $default;
     }
 
@@ -37,7 +37,7 @@ function str_after(string $subject, string $search): string
 {
     $pos = strrpos($subject, $search);
 
-    if ($pos === FALSE) {
+    if ($pos === false) {
         return $subject;
     }
 
@@ -129,7 +129,7 @@ writeln('------');
 
 writeln('This script will replace the above values in all relevant files in the project directory.');
 
-if (!confirm('Modify files?', TRUE)) {
+if (! confirm('Modify files?', true)) {
     exit(1);
 }
 
@@ -149,7 +149,7 @@ foreach ($files as $file) {
         ':package_description' => $description,
     ]);
 
-    match (TRUE) {
+    match (true) {
         str_contains($file, determineSeparator('src/SkeletonClass.php')) => rename($file, determineSeparator('./src/'.$className.'Class.php')),
         str_contains($file, 'README.md') => removeReadmeParagraphs($file),
         default => [],
@@ -158,4 +158,4 @@ foreach ($files as $file) {
 
 confirm('Execute `composer install` and run tests?') && run('composer install && composer test');
 
-confirm('Let this script delete itself?', TRUE) && unlink(__FILE__);
+confirm('Let this script delete itself?', true) && unlink(__FILE__);
