@@ -7,5 +7,5 @@
 /phpunit.xml.dist   export-ignore
 /tests              export-ignore
 /.editorconfig      export-ignore
-/.php_cs            export-ignore
+/.php-cs-fixer.dist.php            export-ignore
 /.github            export-ignore
