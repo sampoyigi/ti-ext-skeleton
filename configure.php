@@ -5,7 +5,7 @@ function ask(string $question, string $default = ''): string
 {
     $answer = readline($question.($default ? " ({$default})" : null).': ');
 
-    if (! $answer) {
+    if (!$answer) {
         return $default;
     }
 
@@ -16,7 +16,7 @@ function confirm(string $question, bool $default = false): bool
 {
     $answer = ask($question.' ('.($default ? 'Y/n' : 'y/N').')');
 
-    if (! $answer) {
+    if (!$answer) {
         return $default;
     }
 
@@ -129,7 +129,7 @@ writeln('------');
 
 writeln('This script will replace the above values in all relevant files in the project directory.');
 
-if (! confirm('Modify files?', true)) {
+if (!confirm('Modify files?', true)) {
     exit(1);
 }
 
