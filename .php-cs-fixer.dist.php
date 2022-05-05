@@ -12,7 +12,6 @@ return (new PhpCsFixer\Config())
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => ['sort_algorithm' => 'alpha'],
         'no_unused_imports' => TRUE,
-        'not_operator_with_successor_space' => TRUE,
         'trailing_comma_in_multiline' => TRUE,
         'phpdoc_scalar' => TRUE,
         'unary_operator_spaces' => TRUE,
