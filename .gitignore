@@ -7,8 +7,5 @@ composer.lock
 coverage
 phpunit.xml
 psalm.xml
-vendor
+/vendor
 .php-cs-fixer.cache
-node_modules/
-npm-debug.log
-yarn-error.log
