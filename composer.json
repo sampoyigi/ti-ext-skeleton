@@ -1,6 +1,6 @@
 {
   "name": ":vendor_slug/:package_slug",
-  "type": "tastyigniter-extension",
+  "type": "tastyigniter-package",
   "description": ":package_description",
   "license": "MIT",
   "authors": [
