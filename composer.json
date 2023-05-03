@@ -14,8 +14,9 @@
     ":package_slug"
   ],
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.0",
-    "pestphp/pest": "^1.20"
+    "laravel/pint": "^1.2",
+    "pestphp/pest-plugin-laravel": "^2.0",
+    "pestphp/pest": "^2.5"
   },
   "extra": {
     "tastyigniter-extension": {
