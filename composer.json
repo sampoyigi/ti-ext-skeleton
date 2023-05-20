@@ -1,47 +1,59 @@
 {
-  "name": ":vendor_slug/:package_slug",
-  "type": "tastyigniter-package",
-  "description": ":package_description",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": ":author_name",
-      "email": "author@domain.com"
-    }
-  ],
-  "keywords": [
-    ":vendor_name",
-    ":package_slug"
-  ],
-  "require-dev": {
-    "laravel/pint": "^1.2",
-    "nunomaduro/larastan": "^2.4.0",
-    "orchestra/testbench": "^8.5",
-    "pestphp/pest-plugin-laravel": "^2.0",
-    "pestphp/pest": "^2.5"
-  },
-  "extra": {
-    "tastyigniter-extension": {
-      "name": ":package_name",
-      "icon": {
-        "class": "fa fa-plug",
-        "color": "#fff",
-        "backgroundColor": "#000"
-      }
-    }
-  },
-  "scripts": {
-    "test": "vendor/bin/pest",
-    "test-coverage": "vendor/bin/pest --coverage",
-    "format": "vendor/bin/pint",
-    "static": "vendor/bin/phpstan analyse --ansi --memory-limit 1056M"
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+	"name": ":vendor_slug/:package_slug",
+	"type": "tastyigniter-package",
+	"description": ":package_description",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": ":author_name",
+			"email": "author@domain.com"
+		}
+	],
+	"keywords": [
+		":vendor_name",
+		":package_slug"
+	],
+	"require-dev": {
+		"laravel/pint": "^1.2",
+		"nunomaduro/larastan": "^2.4.0",
+		"sampoyigi/testbench": "dev-main as 1.0",
+		"pestphp/pest-plugin-laravel": "^2.0",
+		"tastyigniter/core": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"VendorName\\PackageName\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"VendorName\\PackageName\\Tests\\": "tests/"
+		}
+	},
+	"extra": {
+		"tastyigniter-extension": {
+			"name": ":package_name",
+			"icon": {
+				"class": "fa fa-plug",
+				"color": "#fff",
+				"backgroundColor": "#000"
+			}
+		}
+	},
+	"scripts": {
+		"test": "vendor/bin/pest",
+		"test-coverage": "vendor/bin/pest --coverage",
+		"format": "vendor/bin/pint",
+		"static": "vendor/bin/phpstan analyse --ansi --memory-limit 1056M"
+	},
+	"config": {
+		"sort-packages": true,
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"php-http/discovery": true,
+			"composer/installers": true
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
