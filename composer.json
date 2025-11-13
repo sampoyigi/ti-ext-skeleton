@@ -20,7 +20,7 @@
         "laravel/pint": "^1.2",
         "larastan/larastan": "^3.0",
         "sampoyigi/testbench": "^1.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
         "rector/rector": "^2.0"
     },
     "autoload": {
